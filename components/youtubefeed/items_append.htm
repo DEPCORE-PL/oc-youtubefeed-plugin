@@ -1,0 +1,8 @@
+{% for item in items %}
+<a href="https://youtu.be/{{ item.snippet.resourceId.videoId}}">
+    <div class="item" style="width: 360px; margin: 0px 20px 20px 0px">
+        <img src="{{item.snippet.thumbnails.medium.url}}" width="360px" alt="">
+        <h5>{{ item.snippet.title }}</h5>
+    </div>
+</a>
+{% endfor %}

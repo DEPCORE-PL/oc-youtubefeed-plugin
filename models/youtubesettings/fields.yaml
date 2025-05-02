@@ -1,0 +1,18 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+tabs:
+    defaultTab: General
+    fields:
+        api_key:
+            label: API Key
+            comment: Api Key for Youtube Access
+            type: text
+            tab: General
+        _get_uploads:
+            tab: Tools
+            label:    Uploads Playlist
+            type:     partial
+            path:     $/depcore/youtubefeed/controllers/settings/_get_uploads.htm
+            span:     full

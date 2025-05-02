@@ -1,0 +1,7 @@
+<button
+    data-request="{{ __SELF__ }}::onLoadMore"
+    data-request-data=' "page": "{{ nextPage }}", "playlist": "{{ playlist }}"'
+    data-request-update="'@items_append': '#item-list', '@view_more': '#view-more-wrapper'"
+    class="btn btn-primary">
+    View More
+</button>

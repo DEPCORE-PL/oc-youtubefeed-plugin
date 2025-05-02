@@ -1,0 +1,13 @@
+{% styles %}
+
+<div class="dc-youtubefeed">
+    <ul id="item-list" data-ajax-update-mode="append" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+        {% partial '@items_append' items=__SELF__.items %}
+    </ul>
+
+    <div id="view-more-wrapper">
+        {% if __SELF__.nextPage != null %}
+            {% partial '@view_more' nextPage=__SELF__.nextPage %}
+        {% endif %}
+    </div>
+</div>

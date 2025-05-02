@@ -1,0 +1,23 @@
+<div class="form-group">
+    <label for="stringInput">Enter youtube account url</label>
+    <input
+        id="stringInput"
+        type="text"
+        name="channelLink"
+        data-request="onGetChannelPlaylist"
+        class="form-control"
+        placeholder="https://www.youtube.com/@LofiGirl"
+    >
+</div>
+
+<button
+    type="button"
+    class="btn btn-primary"
+    data-request="onGetChannelPlaylist"
+>
+    Get uploads playlist
+</button>
+
+<div id="stringOutput" class="mt-3">
+    <!-- AJAX result will be injected here -->
+</div>
