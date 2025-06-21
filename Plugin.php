@@ -1,6 +1,5 @@
 <?php namespace Depcore\YoutubeFeed;
 
-use Backend;
 use Depcore\YoutubeFeed\Classes\YoutubeUtils;
 use Depcore\YoutubeFeed\Components\YoutubeFeed;
 use Depcore\YoutubeFeed\Models\YoutubeSettings;
@@ -9,9 +8,10 @@ use System\Classes\PluginBase;
 use System\Controllers\Settings;
 
 /**
- * Plugin Information File
+ * Plugin for displaying a Youtube videos feed from multiple sources.
  *
- * @link https://docs.octobercms.com/3.x/extend/system/plugins.html
+ * @package Depcore\YoutubeFeed
+ * @author Depcore
  */
 class Plugin extends PluginBase
 {
@@ -21,19 +21,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'YoutubeFeed',
-            'description' => 'No description provided yet...',
+            'name' => 'Youtube Feed',
+            'description' => 'A plugin to display a Youtube videos feed from multiple sources.',
             'author' => 'Depcore',
-            'icon' => 'icon-leaf'
+            'icon' => 'icon-play'
         ];
-    }
-
-    /**
-     * register method, called when the plugin is first registered.
-     */
-    public function register()
-    {
-        //
     }
 
     /**
@@ -41,6 +33,8 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+
+        // add youtube feed tools to the settings controller
         Settings::extend(function($controller) {
             $controller->addDynamicMethod('onGetChannelPlaylist', function() use ($controller) {
                 /*

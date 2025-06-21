@@ -1,22 +1,17 @@
 <?php namespace Depcore\YoutubeFeed\Models;
 
-use Model;
-
 /**
- * YoutubeSettings Model
+ * YoutubeSettings model for managing plugin settings.
  *
- * @link https://docs.octobercms.com/3.x/extend/system/models.html
+ * This model is used to store and validate settings for the Youtube Feed plugin.
+ *
+ * @package Depcore\YoutubeFeed
+ * @author Depcore
  */
 class YoutubeSettings extends \System\Models\SettingModel
 {
-    use \October\Rain\Database\Traits\Validation;
-
     public $settingsCode = 'depcore_youtubefeed_settings';
 
     public $settingsFields = 'fields.yaml';
 
-    /**
-     * @var array rules for validation
-     */
-    public $rules = [];
 }

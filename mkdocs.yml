@@ -1,0 +1,8 @@
+site_name: YouTube Feed OctoberCMS Plugin
+site_description: Documentation for the YouTube Feed plugin for OctoberCMS
+site_author: Depcore
+repo_url: https://github.com/DEPCORE-PL/
+docs_dir: docs
+
+plugins:
+  - search

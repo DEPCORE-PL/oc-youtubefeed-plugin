@@ -6,9 +6,14 @@
         "composer/installers": "~1.0",
         "madcoda/php-youtube-api": "^1.2"
     },
+    "require-dev": {
+        "saggre/phpdocumentor-markdown": "^0.1.4",
+        "phpdocumentor/shim": "^3.8"
+    },
     "config": {
         "allow-plugins": {
-            "composer/installers": true
+            "composer/installers": true,
+            "phpdocumentor/shim": true
         }
     }
 }
